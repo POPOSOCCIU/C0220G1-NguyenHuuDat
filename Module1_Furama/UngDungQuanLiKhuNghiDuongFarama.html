@@ -5,6 +5,27 @@
     <title>Ứng Dụng Quản Lý Khu nghỉ dưỡng Furama</title>
 </head>
 <body>
+<script>
+    let name=prompt("Vui lòng điền tên của bạn")
+    let CMND=prompt("Vui lòng điền Số CMND của bạn")
+    let ddmmyyyy=prompt("Vui lòng điền ngày/tháng/năm sinh của bạn")
+    let email=prompt("Vui lòng điền hộp tư điện tử của bạn")
+    let address=prompt("Vui lòng điền địa chỉ của bạn")
+    let typecustomer=prompt("Vui lòng điền phân loại Khách hàng (Diamond, Platinum, Gold, Silver, Member)")
+    let voucher=prompt("Vui lòng điền số tiền được giảm")
+    let amount=parseInt(prompt("Vui lòng điền số lượng phòng"))
+    let dd=parseInt(prompt("Vui lòng điền ngày thuê"))
+    let typeservice=prompt("Vui lòng điền loại dịch vụ(Villa, House, Room)")
+    let typeroom=prompt("Vui lòng nhập loại phòng thuê(Vip, Business, Normal)")
+    let price
+    if (typeservice==="Villa") price=500
+    else if(typeservice==="House") price=300
+    else if(typeservice==="Room") price=100
+    pay=(amount*dd*price)-voucher
+    alert("Tên KH: "+name+"\n"+"Số CMND: "+CMND+"\n"+"Ngày/Tháng/Năm sinh: "+ddmmyyyy+"\n"+"Email: "+email+"\n"+"Địa chỉ: "+address+"\n"+ "Loại khách hàng: "+typecustomer+"\n"+"Giảm giá:"+voucher+"\n" + "Số lượng phòng: "+amount+"\n"+"Số ngày thuê: "+dd+"\n"+"Loại dịch vụ: " + typeservice+"\n"+"Loại phòng thuê: "+typeroom+"\n"+"Tổng số tiền phải trả: "+pay)
+
+</script>
+
 
 </body>
 </html>

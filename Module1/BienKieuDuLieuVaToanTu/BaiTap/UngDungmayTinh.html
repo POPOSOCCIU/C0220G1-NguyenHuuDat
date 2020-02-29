@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<input type="text" id="num1">
+<input type="text" id="num2"><br><br>
+<button type="button" onclick="cong()">Addition(+)</button>
+<button type="button" onclick="tru()">Subtraction(-)</button>
+<button type="button" onclick="nhan()">Multiplication(X)</button>
+<button type="button" onclick="chia()">Division(/)</button>
+<script>
+        let num1=parseInt(document.getElementById("num1").value)
+        let num2=parseInt(document.getElementById("num2").value)
+        let ketqua=document.getElementById("ketqua")
+    function cong() {ketqua.value=num1+num2}
+    function tru() {ketqua.value=num1-num2}
+    function nhan() {ketqua.value=num1*num2}
+    function chia() {ketqua.value=num1/num2}
+    document.write("ReSult Divition: "+ketqua)
+
+</script>
+
+</body>
+</html>

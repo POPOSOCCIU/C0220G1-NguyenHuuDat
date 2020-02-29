@@ -5,11 +5,42 @@
     <title>Ứng dụng chuyển đổi tiền tệ</title>
 </head>
 <body>
-<script>
     <label for="giatri">Amount:</label>
     <input type="text" id="amount">
     <label>FromCurrent</label>
+    <select id="fromcurrent">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+    </select>
+    <label>ToCurrent</label>
+    <select id="tocurrent">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+    </select>
+    <input id="result">
+    <button onclick="convert()">Convert</button>
+    <script>
+            function convert() {
+                let amount = document.getElementById("amount");
+                let fromcurrent = document.getElementById("fromcurrent").value;
+                let tocurrent = docunment.getElementById("tocurrent").value;
+                let result = 0;
+                if (fromcurrent==="VND" && tocurrent==="USD")
+                {
+                    result = amount.value/23000;
+                }
+            else
+                if (fromcurrent==="USD" && tocurrent==="VND")
+                {
+                    result = amount.value*23000
+                }
+            else
+                {
+                    alert("Yêu cầu người dùng lựa chọn loại tiền")
+                }
+                document.write("Giá trị tương ứng là: "+ result)
+            }
 
 </script>
 </body>
-</html
+</html>

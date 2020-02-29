@@ -12,15 +12,26 @@
 <button type="button" onclick="nhan()">Multiplication(X)</button>
 <button type="button" onclick="chia()">Division(/)</button>
 <script>
-        let num1=parseInt(document.getElementById("num1").value)
-        let num2=parseInt(document.getElementById("num2").value)
-        let ketqua=document.getElementById("ketqua")
-    function cong() {ketqua.value=num1+num2}
-    function tru() {ketqua.value=num1-num2}
-    function nhan() {ketqua.value=num1*num2}
-    function chia() {ketqua.value=num1/num2}
-    document.write("ReSult Divition: "+ketqua)
-
+    let num1=parseInt(document.getElementById("num1").value)
+    let num2=parseInt(document.getElementById("num2").value)
+    let ketqua
+    function cong() {
+        ketqua=document.getElementById("ketqua")
+        ketqua.value=num1+num2
+    }
+    function tru() {
+        ketqua=document.getElementById("ketqua")
+        ketqua.value=num1-num2
+    }
+    function nhan() {
+        ketqua=document.getElementById("ketqua")
+        ketqua.value=num1*num2
+    }
+    function chia() {
+        ketqua=document.getElementById("ketqua")
+        ketqua.value=num1/num2
+    }
+    Result Division:<input type="text" id="ketqua" value=""/>
 </script>
 
 </body>

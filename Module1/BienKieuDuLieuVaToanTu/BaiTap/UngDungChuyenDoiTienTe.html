@@ -8,12 +8,12 @@
     <label for="giatri">Amount:</label>
     <input type="text" id="amount">
     <label>FromCurrent</label>
-    <select id="fromcurrent">
+    <select id="fromCurrent">
             <option value="VND">VND</option>
             <option value="USD">USD</option>
     </select>
     <label>ToCurrent</label>
-    <select id="tocurrent">
+    <select id="toCurrent">
             <option value="VND">VND</option>
             <option value="USD">USD</option>
     </select>
@@ -22,15 +22,14 @@
     <script>
             function convert() {
                 let amount = document.getElementById("amount");
-                let fromcurrent = document.getElementById("fromcurrent").value;
-                let tocurrent = docunment.getElementById("tocurrent").value;
+                let fromcurrent = document.getElementById("fromCurrent").value;
+                let tocurrent = document.getElementById("toCurrent").value;
                 let result = 0;
                 if (fromcurrent==="VND" && tocurrent==="USD")
                 {
                     result = amount.value/23000;
                 }
-            else
-                if (fromcurrent==="USD" && tocurrent==="VND")
+                else if (fromcurrent==="USD" && tocurrent==="VND")
                 {
                     result = amount.value*23000
                 }
